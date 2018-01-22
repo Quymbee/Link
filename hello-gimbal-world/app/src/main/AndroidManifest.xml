@@ -51,8 +51,8 @@
         </receiver>
 
         <activity
-            android:name=".BeaconPage"
-            android:label="@string/title_activity_beacon_page"></activity>
+            android:name=".Beaconn"
+            android:label="@string/title_activity_beaconn"></activity>
     </application>
 
 </manifest>

@@ -21,6 +21,10 @@ import java.util.List;
 //import java.util.logging.Level;
 //import java.util.logging.Logger;
 import android.util.Log;
+import android.content.SharedPreferences;
+import android.content.Context;
+import android.view.View;
+import android.widget.TextView;
 
 public class AppService extends Service {
 
@@ -31,6 +35,11 @@ public class AppService extends Service {
     private CommunicationListener communicationListener;
     private LinkedList<String> events;
 
+
+    public static final String PLACE_NAME = "Visit().Place().getPlace().getName()";
+
+
+
     @Override
     public void onCreate(){
         events = new LinkedList<>(GimbalDAO.getEvents(getApplicationContext()));
@@ -40,8 +49,13 @@ public class AppService extends Service {
         setupGimbalCommunicationManager();
         Gimbal.start();
 
-        Log.v("TEST", "START2")
+
+        SharedPreferences placeName = this.getSharedPreferences(PLACE_NAME,);
+
+        Log.v("TEST", "START2");
     }
+
+
 
     private void setupGimbalCommunicationManager() {
         communicationListener = new CommunicationListener() {
@@ -77,8 +91,11 @@ public class AppService extends Service {
             @Override
             public void onVisitStart(Visit visit) {
 
+
                 Log.v("PLACE NAME", "VISIT START");
                 Log.v("PLACE NAME STATE", visit.getPlace().getName());
+
+
 
                 /*
                 Logger.getGlobal().log(Level.INFO, "VISIT START");
