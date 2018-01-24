@@ -10,4 +10,5 @@
     <string name="title_activity_beacon">Beacon</string>
     <string name="title_activity_beaconn">Beaconn</string>
     <string name="title_activity_menu_start">MenuStart</string>
+    <string name="title_activity_welcome_screen">WelcomeScreen</string>
 </resources>
