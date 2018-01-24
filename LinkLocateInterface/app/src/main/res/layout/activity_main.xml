@@ -41,6 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         tools:layout_editor_absoluteY="31dp" />”@drawable/linknyc-logo”
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +73,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo_intersection"
         tools:layout_editor_absoluteY="131dp" />”@drawable/logo_intersection.jpg”
+=======
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />”@drawable/linknyc_logo.png”
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.413"
+        app:srcCompat="@drawable/linknyc_logo.png" />
+>>>>>>> 22dca484e0d47a64b7cb58036c974c62d24324ac
 
 
     <android.support.constraint.Guideline

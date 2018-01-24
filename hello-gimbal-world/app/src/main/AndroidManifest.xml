@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
@@ -53,8 +52,8 @@
         </receiver>
 
         <activity
-            android:name=".Beaconn"
-            android:label="@string/title_activity_beaconn"></activity>
+            android:name=".MenuStart"
+            android:label="@string/title_activity_menu_start"></activity>
     </application>
 
 </manifest>
