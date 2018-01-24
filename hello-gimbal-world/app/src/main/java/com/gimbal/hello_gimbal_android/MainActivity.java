@@ -15,7 +15,6 @@ public class MainActivity extends Activity {
     public TextView beaconTextView;
     public TextView addressTextView;
     public String address;
-    public String messageFull;
     public String temp;
 
     @Override
