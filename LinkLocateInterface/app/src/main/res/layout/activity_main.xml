@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.annakolesnick.linklocateinterface.MainActivity">
+    tools:context="com.example.annakolesnick.linklocateinterface.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="450dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="360dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="56dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="263dp"
+            android:layout_height="150dp"
             android:gravity="center"
             android:text="Welcome to LinkLocate!"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -28,27 +29,49 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="373dp"
+        android:layout_height="128dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:adjustViewBounds="true"
-        android:maxWidth="200dp"
-        android:maxHeight="43dp"
+
+
         android:scaleType="fitCenter"
-        android:src=
+        android:src="@drawable/link_nyclogo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="31dp" />”@drawable/linknyc-logo”
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+    app:layout_constraintVertical_bias="0.413"
+    app:srcCompat="@drawable/link_nyclogo2" />
 
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="391dp"
+        android:layout_height="219dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="true"
+
+
+        android:scaleType="fitCenter"
+        android:src="logo_intersection.jpg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />”@drawable/linknyc-logo”
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.413"
-        app:srcCompat="@drawable/linknyc-logo" />
+        app:srcCompat="@drawable/logo_intersection"
+        tools:layout_editor_absoluteY="131dp" />”@drawable/logo_intersection.jpg”
 
 
     <android.support.constraint.Guideline

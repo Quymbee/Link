@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,42 +8,23 @@
 
     <LinearLayout
         android:layout_width="360dp"
-        android:layout_height="220dp"
+        android:layout_height="180dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="360dp"
-            android:layout_height="200dp"
-            android:text="Turn On LinkLocate Service"
-            android:textSize="35dp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="220dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="12dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="255dp">
-
-        <Button
-            android:id="@+id/button2"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:text="Menu Options"
-            android:textSize="35dp"
+            android:layout_height="170dp"
+            android:text="There is a Link near you at Madison Ave and E37th Street."
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="40dp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -78,4 +60,13 @@
         tools:layout_editor_absoluteX="294dp"
         tools:layout_editor_absoluteY="475dp" />
 
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="263dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="204dp"></LinearLayout>
 </android.support.constraint.ConstraintLayout>
