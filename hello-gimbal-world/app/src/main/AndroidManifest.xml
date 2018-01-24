@@ -17,9 +17,16 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".MenuStart"
+            android:label="@string/title_activity_menu_start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,9 +58,6 @@
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name=".MenuStart"
-            android:label="@string/title_activity_menu_start"></activity>
     </application>
 
 </manifest>

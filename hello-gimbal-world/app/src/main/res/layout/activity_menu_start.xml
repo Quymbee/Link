@@ -18,18 +18,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/TurnOnLL"
             android:layout_width="360dp"
             android:layout_height="200dp"
             android:text="Turn On LinkLocate Service"
-            android:textSize="35dp" />
+            android:textSize="35sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/AccessMenu"
             android:layout_width="360dp"
             android:layout_height="200dp"
             android:text="Menu Options"
-            android:textSize="35dp" />
+            android:textSize="35sp" />
 
     </LinearLayout>
 
