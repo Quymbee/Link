@@ -7,11 +7,12 @@
     tools:context="com.gimbal.hello_gimbal_android.MenuStart">
 
     <LinearLayout
-        android:layout_width="360dp"
+        android:layout_width="match_parent"
         android:layout_height="420dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="56dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,20 +20,55 @@
 
         <Button
             android:id="@+id/TurnOnLL"
-            android:layout_width="360dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:text="Turn On LinkLocate Service"
             android:textSize="35sp" />
 
         <Button
             android:id="@+id/AccessMenu"
-            android:layout_width="360dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:text="Menu Options"
             android:textSize="35sp" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="444dp">
+
+        <ImageButton
+            android:id="@+id/Back_Button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/back_icon" />
+
+        <ImageButton
+            android:id="@+id/Home_Button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/homebutton" />
+
+        <ImageButton
+            android:id="@+id/Location_Button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/location" />
+
+        <ImageButton
+            android:id="@+id/Settings_Button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/settings" />
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
