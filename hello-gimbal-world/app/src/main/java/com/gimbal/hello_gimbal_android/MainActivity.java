@@ -5,46 +5,45 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.widget.ListView;
 import android.widget.TextView;
-import com.gimbal.android.PlaceEventListener;
-import com.gimbal.android.Place;
-import com.gimbal.android.PlaceManager;
-import com.gimbal.android.Visit;
-
-import android.app.Fragment;
 import android.app.Activity;
-import android.content.SharedPreferences;
 
-public class MainActivity extends ActionBarActivity {
-    private GimbalEventReceiver gimbalEventReceiver;
-    private GimbalEventListAdapter adapter;
+public class MainActivity extends Activity {
+    public GimbalEventReceiver gimbalEventReceiver;
+    public GimbalEventListAdapter adapter;
     public TextView txtview;
 
+    public static String address;
+    public static String messageFull;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, AppService.class);
-
         startService(new Intent(this, AppService.class));
 
-
         adapter = new GimbalEventListAdapter(this);
+        /*
+        Intent intent = new Intent(this, AppService.class);
+        */
 
         /*
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
         */
-        txtview = (TextView) findViewById(R.id.textView02);
+        txtview = findViewById(R.id.textView02);
 
-        SharedPreferences msettings = this.getSharedPreferences("settings", Context.MODE_PRIVATE);
+        if(AppService.placee.equalsIgnoreCase("witny_test_place")){
+            address = "10th Ave and W 30th St";
+        }
+        else{
+            address = "lol idk where u r";
+        }
+        
+        messageFull = AppService.placee + address;
 
-        txtview.setText(msettings);
+        txtview.setText(messageFull);
 
-        //txtview.setText(intent.getAction(AppService.setupGimbalPlaceManager().onVisitStart().getPlace().getName());
 
 
 
@@ -66,10 +65,12 @@ public class MainActivity extends ActionBarActivity {
     protected void onStart() {
         super.onStart();
         gimbalEventReceiver = new GimbalEventReceiver();
+
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(GimbalDAO.GIMBAL_NEW_EVENT_ACTION);
         intentFilter.addAction(AppService.APPSERVICE_STARTED_ACTION);
         registerReceiver(gimbalEventReceiver, intentFilter);
+
     }
 
     @Override
