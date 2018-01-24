@@ -26,6 +26,7 @@ android {
 
 dependencies {
 
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:26.+'
 
@@ -33,7 +34,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.4.0'
     compile 'com.gimbal.android.v2:gimbal-sdk:+'
     compile 'com.gimbal.android.v2:gimbal-slf4j-impl:+'
-
 
 
 }

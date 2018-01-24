@@ -42,13 +42,13 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />”@drawable/linknyc-logo”
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />”@drawable/linknyc_logo.png”
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.413"
-        app:srcCompat="@drawable/linknyc-logo" />
+        app:srcCompat="@drawable/linknyc_logo.png" />
 
 
     <android.support.constraint.Guideline
