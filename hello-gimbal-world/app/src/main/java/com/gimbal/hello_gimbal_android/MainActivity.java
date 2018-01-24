@@ -11,10 +11,12 @@ import android.app.Activity;
 public class MainActivity extends Activity {
     public GimbalEventReceiver gimbalEventReceiver;
     public GimbalEventListAdapter adapter;
-    public TextView txtview;
 
-    public static String address;
-    public static String messageFull;
+    public TextView beaconTextView;
+    public TextView addressTextView;
+    public String address;
+    public String messageFull;
+    public String temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +33,18 @@ public class MainActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
         */
-        txtview = findViewById(R.id.textView02);
 
-        if(AppService.placee.equalsIgnoreCase("witny_test_place")){
-            address = "10th Ave and W 30th St";
-        }
-        else{
-            address = "lol idk where u r";
-        }
-        
-        messageFull = AppService.placee + address;
+        beaconTextView = findViewById(R.id.beaconText);
+        addressTextView = findViewById(R.id.addressText);
 
-        txtview.setText(messageFull);
+        address = "10th Ave and W 30th St";
+        temp = AppService.placee;
+
+
+
+        beaconTextView.setText(temp);
+        addressTextView.setText(address);
+        //txtview.setText(AppService.placee);
 
 
 

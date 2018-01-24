@@ -4,6 +4,7 @@ import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+
 import com.gimbal.android.Communication;
 import com.gimbal.android.CommunicationListener;
 import com.gimbal.android.CommunicationManager;
@@ -12,10 +13,18 @@ import com.gimbal.android.PlaceEventListener;
 import com.gimbal.android.PlaceManager;
 import com.gimbal.android.Push;
 import com.gimbal.android.Visit;
+import com.gimbal.android.Place;
+
 import java.util.LinkedList;
 import java.util.List;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 import android.util.Log;
-
+import android.content.SharedPreferences;
+import android.content.Context;
+import android.view.View;
+import android.widget.TextView;
+import android.app.Activity;
 
 public class AppService extends Service {
 
@@ -29,6 +38,7 @@ public class AppService extends Service {
 
     public static String placee;
 
+
     @Override
     public void onCreate(){
         events = new LinkedList<>(GimbalDAO.getEvents(getApplicationContext()));
@@ -39,8 +49,6 @@ public class AppService extends Service {
         Gimbal.start();
 
         Log.v("TEST", "START2");
-
-
 
     }
 
@@ -53,6 +61,7 @@ public class AppService extends Service {
             public Notification.Builder prepareCommunicationForDisplay(Communication communication, Visit visit, int notificationId) {
                 addEvent(String.format( "Communication Delivered : %s", communication.getTitle()));
                 // If you want a custom notification create and return it here
+
 
                 return null;
             }
