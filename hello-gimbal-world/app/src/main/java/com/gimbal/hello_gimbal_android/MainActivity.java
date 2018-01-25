@@ -9,6 +9,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.app.Activity;
+import android.widget.ImageButton;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,9 @@ import org.w3c.dom.Text;
 public class MainActivity extends Activity {
     public GimbalEventReceiver gimbalEventReceiver;
     public GimbalEventListAdapter adapter;
+
+    ImageButton back;
+    ImageButton home;
 
    // public TextToSpeech tts;
 
@@ -38,6 +42,7 @@ public class MainActivity extends Activity {
         adapter = new GimbalEventListAdapter(this);
 
 
+
         beaconTextView = findViewById(R.id.beaconText);
         addressTextView = findViewById(R.id.addressText);
 
@@ -50,8 +55,9 @@ public class MainActivity extends Activity {
         //  speakOut();
 
 
-
     }
+
+
 /*
     public void speakOut(){
        // CharSequence txt = beaconTextView.getText();
