@@ -1,74 +1,97 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
 
-        android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/beaconText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/beaconText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello world"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="40dp"
+                android:textStyle="bold" />
 
 
-
-    <TextView
-        android:id="@+id/addressText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Hello World 2" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="115dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="150dp"
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Hello World 2"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
 
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="444dp">
+        <ImageView
+            android:id="@+id/Link_Locate_Map"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/link_map" />
 
-        <ImageButton
-            android:id="@+id/Back_Button"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/back_icon" />
 
-        <ImageButton
-            android:id="@+id/Home_Button"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/homebutton" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
 
-        <ImageButton
-            android:id="@+id/Location_Button"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/location" />
+            <ImageButton
+                android:id="@+id/Back_Button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Back"
 
-        <ImageButton
-            android:id="@+id/Settings_Button"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/settings" />
+                android:src="@drawable/back_icon" />
+
+            <ImageButton
+                android:id="@+id/Home_Button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Home"
+                android:src="@drawable/homebutton" />
+
+            <ImageButton
+                android:id="@+id/Location_Button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Near You"
+                android:src="@drawable/location" />
+
+            <ImageButton
+                android:id="@+id/Settings_Button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="Settings"
+                android:src="@drawable/settings" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </RelativeLayout>
